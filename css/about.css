@@ -8,6 +8,34 @@ nav {
     width: 100%; 
 }
 
+.header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0 20px 0;
+    display: none;
+    
+}
+
+.header a {
+    text-decoration: none;
+    color: #25281F;
+}
+
+.logo, #primaryLogo {
+    color: #25281F;
+    font-family: 'Domine', 'Georgia', 'serif';
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.ToggleIcon img {
+    width: 35px;
+    height: 35px;
+}
+
 .navContainer {
     width: 90%;
     display: flex;
@@ -75,6 +103,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
+    margin-top: 30px;
 }
 
 .AboutMainContent {
@@ -116,33 +145,29 @@ nav {
 }
 
 .aboutPageButtonContainer {
-    width: 60%;
-    max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
 }
 
-.aboutPageCTA a {
+.aboutPageButtonContainer a {
     text-decoration: none;
+    color: #25281F;
+}
+
+.aboutPageButtonContainer button {
     font-family: 'Heebo', 'Arial', 'Sans Serif';
     font-size: 24px;
-    font-weight: 400;
-    color: #25281F;
-    
-}
-
-.aboutPageCTA {
     background-color: #F3B56C;
     border: 0px;
     border-radius: 10px;
-    width: 200px;
-    height: 61px;
+    padding: 13px 28px;
+    transition: 02.s;
 }
 
-
+.aboutPageButtonContainer button:hover {
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(37,40,31,0.2);
+}
 
 footer {
     width: 100%;
@@ -179,5 +204,41 @@ footer {
     .aboutPageButtonContainer {
         flex-direction: column;
         gap: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header {
+        display: flex;
+    }
+
+    .navContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        display: none;
+    }
+
+    #primaryLogo {
+        display: none;
+    }
+
+    .navigationIconsContainer {
+        justify-content: center;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .primaryNavigationContainer {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        margin: 0;
+    }
+
+    #crossIcon {
+        display: none;
     }
 }
